@@ -1,0 +1,35 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 16px; /* 16px gap between cards fits 932px total width */
+  width: 932px;
+  height: 2932px;
+  position: absolute;
+  top: 652px;
+  left: 412px;
+}
+
+/* ----------- Responsive Media Queries ----------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: auto;
+    left: 20px;
+    right: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0 16px;
+    gap: 20px;
+    height: auto;
+  }
+}
